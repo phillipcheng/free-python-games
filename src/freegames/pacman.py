@@ -166,7 +166,7 @@ def change(x, y):
         aim.y = y
 
 
-speed = 10
+speed = 8
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
