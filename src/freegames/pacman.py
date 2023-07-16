@@ -14,7 +14,7 @@ from turtle import *
 
 from freegames import floor, vector
 
-speed = 5
+pac_speed = 5
 ghost_speed = 7
 
 state = {'score': 0}
@@ -177,10 +177,10 @@ writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
 listen()
-onkey(lambda: change(speed, 0), 'Right')
-onkey(lambda: change(-1 * speed, 0), 'Left')
-onkey(lambda: change(0, speed), 'Up')
-onkey(lambda: change(0, -1 * speed), 'Down')
+onkey(lambda: change(pac_speed, 0), 'Right')
+onkey(lambda: change(-1 * pac_speed, 0), 'Left')
+onkey(lambda: change(0, pac_speed), 'Up')
+onkey(lambda: change(0, -1 * pac_speed), 'Down')
 world()
 move()
 done()
