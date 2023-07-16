@@ -48,6 +48,8 @@ tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
+
+
 # fmt: on
 
 
@@ -164,6 +166,7 @@ def change(x, y):
         aim.y = y
 
 
+speed = 10
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
@@ -171,10 +174,10 @@ writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
 listen()
-onkey(lambda: change(5, 0), 'Right')
-onkey(lambda: change(-5, 0), 'Left')
-onkey(lambda: change(0, 5), 'Up')
-onkey(lambda: change(0, -5), 'Down')
+onkey(lambda: change(speed, 0), 'Right')
+onkey(lambda: change(-1 * speed, 0), 'Left')
+onkey(lambda: change(0, speed), 'Up')
+onkey(lambda: change(0, -1 * speed), 'Down')
 world()
 move()
 done()
