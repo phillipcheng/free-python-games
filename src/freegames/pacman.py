@@ -14,6 +14,9 @@ from turtle import *
 
 from freegames import floor, vector
 
+speed = 5
+ghost_speed = 7
+
 state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
@@ -137,10 +140,10 @@ def move():
             point.move(course)
         else:
             options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
+                vector(ghost_speed, 0),
+                vector(-1 * ghost_speed, 0),
+                vector(0, ghost_speed),
+                vector(0, -1 * ghost_speed ),
             ]
             plan = choice(options)
             course.x = plan.x
@@ -166,7 +169,7 @@ def change(x, y):
         aim.y = y
 
 
-speed = 8
+
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
