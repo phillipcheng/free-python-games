@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 
 from constants import *
-from pacman1.vector import Vector2
+from vector import Vector2
 
 
 class Pacman:

@@ -1,8 +1,8 @@
 import pygame
 from pygame.locals import *
 
-from pacman1.constants import SCREENSIZE, BLACK
-from pacman1.pacman import Pacman
+from constants import *
+from pacman_game.pacman import Pacman
 
 
 class GameController(object):
