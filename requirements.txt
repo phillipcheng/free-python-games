@@ -1,1 +1,5 @@
 -e .
+
+pygame~=2.5.0
+freegames~=2.5.3
+pytest~=7.4.0
